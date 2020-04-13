@@ -1,0 +1,33 @@
+;; shadow-cljs configuration
+{
+ :lein {:profile "dev"}
+ :dependencies
+       []
+
+ :builds
+       {:app    {:target     :browser
+                 :output-dir "examples/js/compiled"
+                 :asset-path "/js/compiled"
+                 :modules
+                             {:main
+                              {:entries [example]}}
+                 :compiler-options {:optimizations :simple}
+                 :devtools
+                 ;; before live-reloading any code call this function
+                             {:before-load example/stop
+                              ;; after live-reloading finishes call this function
+                              :after-load  example/start
+                              ;; serve the public directory over http at port 8700
+                              :http-root   "examples"
+                              :http-port   8700
+                              :preloads    [devtools.preload]}
+                 }
+
+        :test {:target    :browser-test
+               :test-dir  "test/public/js/test"
+               :devtools  {:http-port 8701
+                           :http-root "test/public/js/test"}}
+
+        }
+       }
+

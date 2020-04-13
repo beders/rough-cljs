@@ -1,0 +1,17 @@
+{
+  "name": "rough-cljs",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "lint": "clj-kondo --lint src/main",
+    "examples": "shadow-cljs release app && rm -rf examples/js/compiled/cljs-runtime"
+  },
+  "devDependencies": {
+    "shadow-cljs": "2.8.94"
+  },
+  "dependencies": {
+    "react": "16.13.0",
+    "react-dom": "16.13.0",
+    "roughjs": "^4.0.4"
+  }
+}
