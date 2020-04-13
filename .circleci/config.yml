@@ -31,7 +31,8 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm -g install shadow-cljs
+      - run: npm install shadow-cljs
+      - run: npm install
       - run: lein deps
       
 
@@ -41,4 +42,4 @@ jobs:
           key: v1-dependencies-{{ checksum "project.clj" }}
 
       # run build!
-      - run: shadow-cljs release app
+      - run: npx shadow-cljs release app
