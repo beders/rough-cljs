@@ -4,6 +4,8 @@
                  [reagent "0.10.0"]
                  [org.clojure/spec.alpha "0.2.187"]
                  ]
+  :description "A simple data-driven reagent wrapper for RoughJS. Build diagrams with a hand-drawn look"
+  :url "https://rough-cljs.netlify.com/"
   :license {:name "MIT License"}
   :repositories
   {"clojars" {:url "https://clojars.org/repo"

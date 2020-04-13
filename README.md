@@ -8,6 +8,8 @@ See examples below.
 
 # Installation
 
+[![Clojars Project](https://img.shields.io/clojars/v/monoid/rough-cljs.svg)](https://clojars.org/monoid/rough-cljs)
+
 Get it from Clojars: `[monoid/rough-cljs "1.0"]`
 
 If you are using [Shadow-CLJS](http://shadow-cljs.org/), it will download the JavaScript dependency automatically.
